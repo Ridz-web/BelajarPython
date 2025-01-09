@@ -47,7 +47,7 @@ def start() :
                         
                     main_lagi = input('Apakah anda ingin main lagi? [y/n]: ')
                     if main_lagi != 'y' :
-                        print('terimakasih telah bermain')
+                        print('terimakasih telah bermain\n')
                         break
         except ValueError : # jika pada seksi "try" ada yang error maka akan di alihkan ke sini
             print('pilih jawaban dari salah satu pilihan yang di sediakan [1 / 2 / 3 / 4]') 
