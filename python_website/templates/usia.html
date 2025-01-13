@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>halaman usia</title>
+  </head>
+  <body>
+    <h1>Peghitung Usia</h1>
+    <br />
+    <form method="POST" action="/usia">
+      <p>
+        Masukkan tahun lahir anda:
+        <input
+          type="number"
+          id="tahun_lahir"
+          name="tahun_lahir"
+          placeholder="Tahun lahir"
+          id="" />
+        <button type="submit">Hitung</button>
+      </p>
+    </form>
+    {% if usia is not none %}
+    <p>usia anda adalah: {{usia}} tahun</p>
+    {% endif %}
+    <br />
+    <a href="/">kembali ke home</a>
+  </body>
+</html>

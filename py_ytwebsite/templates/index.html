@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <h1>YouTube Downloader</h1>
+    <br />
+    <form method="POST" action="/">
+      <p>
+        Masukkan URL YouTube:
+        <input
+          type="text"
+          id="yt_url"
+          name="yt_url"
+          placeholder="URL YouTube"
+          required />
+        <button id="submit_btn" type="submit">Download</button>
+      </p>
+    </form>
+    <div id="message">
+      {% if massage %}
+      <p>{{ massage }}</p>
+      {% endif %}
+    </div>
+
+    <script>
+      const submit = document.getElementById("submit_btn");
+      const massage = document.getElementById("message");
+
+      submit.addEventListener("click", function () {
+        massage.innerHTML = "<p>Video sedang di unduh...</p>";
+      });
+    </script>
+  </body>
+</html>
