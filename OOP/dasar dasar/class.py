@@ -1,15 +1,13 @@
-# class dalam oop
 class Hero:
-    pass
+    def __init__(self, name, health, attack, defend):
+        self.name = name
+        self.health = health
+        self.attack = attack
+        self.defend = defend
 
-hero1 = Hero()
-hero2 = Hero()
+hero1 = Hero("Knight", 100, 8, 10)
+hero2 = Hero("Rook", 150, 4, 10)
 
-hero1.name = 'rajaKegelapan'
-hero1.health = 1000
-
-hero2.name = 'rajaIblis'
-hero2.health = 800
-
-print(hero1.__dict__)
-print(hero2.__dict__)
+if __name__ == "__main__":
+    print(hero1.__dict__)
+    print(hero2.__dict__)
