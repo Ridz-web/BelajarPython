@@ -11,7 +11,7 @@ class Player:
         monster.health -= damage
         self.energy -= damage
 
-        if damage == 5:
+        if damage >= 5:
             print(f'Player critical damage to monster: {damage}')
             self.health += 2
             print(f'Player mendapatkan regen health: +2')
@@ -51,7 +51,7 @@ player = Player(health=100, energy=100)
 monster = Monster(100)
 
 while True:
-    damage = random.randint(1, 5)
+    damage = random.randint(3, 10)
     player.attack(damage, monster)
 
     if player.energy <= 0:
